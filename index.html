@@ -7,26 +7,58 @@
   <body>
     <h1>「Webコンテンツ作成」の成果</h1>
     <h2>本テーマの学習目的</h2>
-    <p>HTML、JavaScriptなどによる Webページ作成ができる。</p>
+    <p>このテーマでは、HTML、CSS、JavaScript の基本を学び、これらを組み合わせてWebページを構成する方法を学ぶ。</p>
+    <ul>
+    <li>HTMLによってWebページの構造を記述する基本的な方法がわかる</li>
+    <li>CSSによってWebページの見た目を設定する基本的な方法がわかる</li>
+    <li>JavaScript によって Web ページのインタラクティブな処理を記述する基本的な方法がわかる</li>
+    <li>HTML、CSS、JavaScriptの構文リファレンスから、構文の書式や使用方法の情報を入手できる</li>
+    <li>HTML、CSS、JavaScript、画像・音声・動画ファイルを組み合わせて簡単なWebページが作成できる</li>
+    </ul>
     <h2>プロジェクト課題について</h2>
-    <p></p>
+    <p>プロジェクト課題では、世界の天気の情報も持ってきて表示するWebアプリケーションを作成する。</p>
+    <p>プロジェクト課題のファイル：<a href="project.html" target="_blank">project.html</a></p>
     <h2>毎回の講義で作成したページ</h2>
+
     <h3>第１回 HTMLによるWebページの構造の記述</h3>
-    <p>今回はHTMLの書き方や構成について学びました。</p>
+    <p>今回はHTMLの書き方や構成について学んだ。</p>
     <ul>
       <li>「&lt;p&gt;&lt;/p&gt;」のようなものをブロック要素といい、スラッシュを含まないもので始め、スラッシュを含むもので終了する。</li>
       <li>「&lt;br&gt;」のように終了タグが無いものを、空要素という。</li>
       <li>「&lt;p class=&quot;example&quot;&gt;&lt;/p&gt;」のように、ブロック要素の中に追加したものを属性という。</li>
+      <li>下記のタグはHTMLの主な構成である。&lt;head&gt;でページ上に表示されない設定を行い、&lt;body&gtでページに表示する情報を書く。</li>
+      <code>
+        &lt;!DOCTYPE html&gt;<br>
+        &lt;html&gt;<br>
+        &lt;head&gt;&lt;/head&gt;<br>
+        &lt;body&gt;&lt;/body&gt;<br>
+        &lt;/html&gt;
+      </code>
+      <li>リストの表示には、ul,ol,liの三種類のタグを使用する。ulは数字なし、olは先頭に数字がつく。</li>
+      <li>HTMLは、あくまでも文書の構造を定義する言語であるので、見た目を整えたい場合はCSSを使用する。例えば、&lt;strong&gt;は太字にするという指示ではなく、重要であることを定義している。</li>
     </ul>
+    <h4>練習１－４：リスト</h4>
+    <p>すでに文書が書かれた文書にタグを追加して、HTMLを作成した。</p>
+    <p>編集したファイル：<a href="practice/text-start.html" target="_blank">text-start.html</a></p>
+    <h4>練習１－５：ナビゲーションメニューの作成</h4>
+    <p>practiceフォルダ内の４つのファイル「index.html」「pictures.html」「projects.html」「social.html」を相互にリンクさせた。</p>
+    <p>編集したファイル：<a href="practice/index.html" target="_blank">index.html</a></p>
+    <h4>課題１－２：debug-example.html の修正</h4>
+    <p>practiceフォルダ内のdebug-example.htmlを修正した。</p>
+    <p>編集したファイル：<a href="practice/debug-example.html" target="_blank">project.html</a></p>
+    <h4>課題１－３：index.html を作る</h4>
+    <p>現在表示されているページを作成した。</p>
     <h4>課題１－４：データを選ぶ（プロジェクト課題）</h4>
-    <p>世界の天気</p>
+    <p>「世界の天気」を選んだ。</p>
     <h4>課題１－５：Web アプリケーションのページテンプレート（プロジェクト課題）</h4>
+    <p>project.htmlを作成し、tableタグを使用して「世界の天気」を表示する文書構造を作成した。</p>
+    <p>編集したファイル：<a href="project.html" target="_blank">project.html</a></p>
     <p></p>
+
     <h3>第２回CSSによるWebページの装飾</h3>
     <h3>第３回JavaScriptの基本</h3>
     <h3>第４回フォームとイベント処理</h3>
     <h3>第５回Webページの動的な編集</h3>
     <h3>第６回Webページ作成演習</h3>
-    <p>This is my page</p>
   </body>
 </html>
