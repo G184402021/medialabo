@@ -88,6 +88,7 @@
       <p>編集したファイル：<a href="project.html" target="_blank">project.html</a></p>
     </div>
 
+    <p><br></p>
     <h3>第２回CSSによるWebページの装飾</h3>
     <p>今回はCSSの書き方について学んだ。CSSはHTMLで構造を指定した文書の装飾を行うファイルである。CSSは以下の通りにして適用できる。</p>
     <ul>
@@ -96,7 +97,8 @@
       <li>HTMLの<storong>body</storong>タグ内の要素タグに直接プロパティを記述する。</li>
     </ul>
     <p>CSSを書く場合は、上記のリストの中で一番上の方法が推奨される。</p>
-    <p>CSSはセレクタとプロパティで構成される。セレクタでは、そのプロパティで指定された装飾を行う要素やクラスを指定する。プロパティは、文字サイズや色、背景色、関数を書くことができる。</p>
+    <p>CSSはセレクタとプロパティで構成される。
+      セレクタでは、そのプロパティで指定された装飾を行う要素やクラスを指定する。プロパティは、文字サイズや色、背景色、関数を書くことができる。</p>
     <p>&lt;div&gt;&lt;/div&gt;は特に意味のないブロック要素である。CSSファイル内にclassごとに記述することで、divブロックで囲まれた部分だけプロパティを適用させることができる。プロパティは下記のような種類があるがその数は膨大で、自分が実装したいデザインの方法を調べる必要がある。</p>
     
     <ul>
@@ -128,10 +130,57 @@
       <p>本ページの編集を行った。</p>
     </div>
 
+    <p><br></p>
     <h3>第３回JavaScriptの基本</h3>
+    <p>今回はJavaScriptについて学んだ。JavaScriptはプログラミング言語でありウェブ上で動的な処理を実現することができる。
+      HTML内のbodyタグに&lt;script&gt;を追加して記述する方法と、&lt;script src="ファイル.js" defer&gt;&lt;/script&gt;をheadタグ内に記述してファイルを指定することができる。
+      deferは実行を先送りする命令で、必ず書くこと。
+    </p>
+    <p>
+      Javaと違いJavaScriptはインタプリタ言語なので、コードの記述から実行まで簡単であるが、エラーを見つけて直すことが難しい言語である。
+      例えば、数字と文字列の掛け算は「NaN」として出力され、見かけ上正常に動作してしまう。
+    </p>
+    <p></p>
+    <ul>
+      <li>変数の宣言は let を使う（const, varもある）。動的型付けなので、数字や文字を入れることができる。</li>
+      <li>等しい場合を判定するときは === を使う。</li>
+    </ul>
+
+    <div class="kadai">
+      <h4>練習問題３－５：プログラムを書き足す</h4>
+      <p>JavaScriptで変数を宣言して計算を行い、コンソールに表示させた。</p>
+      <p>編集したファイル：<a href="practice-js/jsintro.html" target="_blank">practice-js/jsintro.html</a></p>
+    </div>
+    <div class="kadai">
+      <h4>練習問題３－６：オブジェクトの参照</h4>
+      <p>for-of構文を使いコンソールに、オブジェクトの配列の要素と配列のオブジェクトの要素を表示した。</p>
+      <p>編集したファイル：<a href="practice-js/obj-practice.html" target="_blank">practice-js/obj-practice.html</a></p>
+    </div>
+    <div class="kadai">
+      <h4>課題３－１：数当てゲームの作成（その1）</h4>
+      <p>ランダムに選ばれた１から１０の数字を当てるゲームを作った。</p>
+      <p>編集したファイル：<a href="workspace-kazuate/kazuate.html" target="_blank">workspace-kazuate/kazuate.html</a></p>
+    </div>
+    <div class="kadai">
+      <h4>課題３－２：オブジェクトからデータを取り出す（プロジェクト課題）</h4>
+      <p>weather.js を編集し project.html に組み込んだ。</p>
+      <p>編集したファイル：<a href="project.html" target="_blank">project.html</a></p>
+    </div>
+    <div class="kadai">
+      <h4>課題３―３：medialabo/index.html を編集しよう</h4>
+      <p>本ページの編集を行った。</p>
+    </div>
+
+    <p><br></p>
     <h3>第４回フォームとイベント処理</h3>
+
+    <p><br></p>
     <h3>第５回Webページの動的な編集</h3>
+
+    <p><br></p>
     <h3>第６回Webページ作成演習</h3>
+
+    <p><br></p>
   </div>
   </body>
 </html>
