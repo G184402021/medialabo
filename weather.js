@@ -53,9 +53,32 @@ console.log('最低気温：' + data.main.temp_min);
 */
 // 拡張課題３－４
 
-console.log('都市名：' + data.name);
-console.log('天気：' + data.weather[0].description);
-console.log('最高気温：' + data.main.temp_max);
-console.log('最低気温：' + data.main.temp_min);
-console.log('天気：' + data.main.temp_min);
-console.log('風速：' + data.wind.speed + 'm/s');
+let itemBefore = [
+  '都市名',
+  '天気',
+  '最高気温',
+  '最低気温',
+  '湿度',
+  '風速'
+];
+let itemAfter = [
+  '',
+  '',
+  '°C',
+  '°C',
+  '%',
+  'm/s'
+];
+
+let printData = [
+  data.name, 
+  data.weather[0].description, 
+  data.main.temp_max, 
+  data.main.temp_min, 
+  data.main.humidity, 
+  data.wind.speed
+];
+
+for(let i=0; i<itemBefore.length; i++) {
+  console.log(itemBefore[i] + '：' + printData[i] + itemAfter[i]);
+}

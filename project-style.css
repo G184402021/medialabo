@@ -1,8 +1,13 @@
 
 body {
-    background-color: #e7f6ff
+    background-color: #e7f6ff;
+    text-align: center;
 }
 
-.title {
+.table {
     text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-right: 10px;
 }

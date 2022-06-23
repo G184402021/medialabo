@@ -132,18 +132,28 @@
 
     <p><br></p>
     <h3>第３回JavaScriptの基本</h3>
-    <p>今回はJavaScriptについて学んだ。JavaScriptはプログラミング言語でありウェブ上で動的な処理を実現することができる。
-      HTML内のbodyタグに&lt;script&gt;を追加して記述する方法と、&lt;script src="ファイル.js" defer&gt;&lt;/script&gt;をheadタグ内に記述してファイルを指定することができる。
+    <p>今回はJavaScriptについて学んだ。JavaScriptはプログラミング言語であり、ウェブ上で動的な処理を実現することができる。
+      HTMLのbodyタグ内に&lt;script&gt;&lt;/script&gt;を追加して直接記述する方法と、headタグ内に&lt;script src="ファイル.js" defer&gt;&lt;/script&gt;を記述してファイルを指定する方法がある。
       deferは実行を先送りする命令で、必ず書くこと。
     </p>
     <p>
       Javaと違いJavaScriptはインタプリタ言語なので、コードの記述から実行まで簡単であるが、エラーを見つけて直すことが難しい言語である。
       例えば、数字と文字列の掛け算は「NaN」として出力され、見かけ上正常に動作してしまう。
     </p>
-    <p></p>
     <ul>
       <li>変数の宣言は let を使う（const, varもある）。動的型付けなので、数字や文字を入れることができる。</li>
       <li>等しい場合を判定するときは === を使う。</li>
+      <li>型変換は「Number(s)」「Math.floor(3.14)」と記述する。</li>
+      <li>文字列は、シングルクォーテーション（'あいう'）でも、ダブルクォーテーション（"あいう"）でも表すことができる。</li>
+    </ul>
+    <p>JavaScriptを通じて利用できる便利なものとして、APIがある。大きく分けてブラウザAPIとサードパーティAPIがある。
+      ブラウザAPIは、標準的なブラウザに搭載されている機能である。代表的なものとして以下のものがあげられる。
+    </p>
+    <ul>
+      <li>DOM API</li>
+      <li>Geolocation API</li>
+      <li>WebGL</li>
+      <li>WebRTC</li>
     </ul>
 
     <div class="kadai">
