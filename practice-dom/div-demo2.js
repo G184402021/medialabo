@@ -22,6 +22,7 @@ for (let student of students) {
     d.classList.add('faceAndName');
     d.insertAdjacentElement('beforeend', img);
     d.insertAdjacentElement('beforeend', p);
+    //d.classList.add('placeholder');
 
     // d をページに追加
     dp.insertAdjacentElement('beforeend', d);

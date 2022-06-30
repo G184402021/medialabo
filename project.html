@@ -7,32 +7,29 @@
         <script src="weather.js" defer></script>
     </head>
     <body>
-        <h1>世界の天気</h1>
+        <div class="title">
+            <h1>世界の天気</h1>
+        </div>
+
+        <p><br></p>
 
         <from>
             <label>都市名を入力<input></label>
             <button>検索</button>
         </from>
-        <p></p>
+
+        <p><br></p>
 
         <table class="table">
             <colgroup span="6"></colgroup>
             <tbody>
-                <tr>
+                <tr id="head" class="head">
                     <th>都市名</th>
                     <th>天気</th>
                     <th>最高気温</th>
                     <th>最低気温</th>
                     <th>湿度</th>
                     <th>風速</th>
-                </tr>
-                <tr>
-                    <td>東京</td>
-                    <td>雨</td>
-                    <td>２３</td>
-                    <td>１４</td>
-                    <td>８０</td>
-                    <td>５ｍ/ｓ</td>
                 </tr>
             </tbody>
         </table>

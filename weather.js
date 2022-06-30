@@ -82,3 +82,15 @@ let printData = [
 for(let i=0; i<itemBefore.length; i++) {
   console.log(itemBefore[i] + '：' + printData[i] + itemAfter[i]);
 }
+
+let trH = document.querySelector('tr#head');
+let trD = document.createElement('tr');
+trH.insertAdjacentElement('afterend', trD);
+for(let i=0; i<itemBefore.length; i++) {
+  let th = document.createElement('th');
+  th.textContent = printData[i] + itemAfter[i];
+  trD.insertAdjacentElement('beforeend', th);
+}
+
+
+

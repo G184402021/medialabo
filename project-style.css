@@ -4,10 +4,26 @@ body {
     text-align: center;
 }
 
+div.title {
+    width: 350px;
+    background-color: #25358f;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 0.1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .table {
+    height: 80px;
+    width: 650px;
     text-align: center;
     background-color: #ffffff;
     border-radius: 10px;
-    margin-right: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head {
+    background-color: #f9ffe4;
 }

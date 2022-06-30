@@ -183,6 +183,67 @@
 
     <p><br></p>
     <h3>第４回フォームとイベント処理</h3>
+    <p>今回はDOM_APIを学んだ。ブラウザのコンソール上でプログラムを実行して要素や要素などの「セレクター」を検索することができる。
+      このDOM_APIを使用して、HTMLの追加や削除、クラスの追加、CSSの設定変更など、下記の項目をJavaScriptファイルで実行できる。
+    </p>
+    <ul>
+      <li>検索：.querySelector(セレクター);</li>
+      <li>全部検索：.querySelectorAll(セレクター);</li>
+      <li>要素の作成：.createElement(タグ名);</li>
+      <li>要素のテキストの書き換え：.textContent() = 書き換えるテキスト;</li>
+      <li>要素の追加：.insertAdjacentElement(位置, 要素);</li>
+      <li>要素の削除：.remove();</li>
+      <li>CSSの書き換え：.style.書き換える種類 = 書き換える値　（「書き換える種類」ex. color, backgroundColor, fontSize　など。）</li>
+      <li>クラスの追加：.classList.add(クラス名);　（クラスはCSSファイルで定義されているもの。）</li>
+      <li>クラスの確認：.classList.contains(クラス名);　（クラスが含まれていれば「True」、含まれていなければ「False」を返す。）</li>
+    </ul>
+
+    <div class="kadai">
+      <h4>練習問題４－６：プログラムを組み込む</h4>
+      <p>「ユーラシア大陸」を削除して、「アジア大陸」と「ヨーロッパ大陸」を追加し、「６つの大陸」を「７つの大陸」に書き換えるプログラムを作った。</p>
+      <p>編集したファイル：<a href="practice-dom/dom-demo.html" target="_blank">dom-demo.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>練習問題４－７：7大洋のリストを追加する</h4>
+      <p>「7つの大洋」の下に、リストを挿入して7つの大洋を箇条書きするプログラムを作った。</p>
+      <p>編集したファイル：<a href="practice-dom/dom-demo.html" target="_blank">dom-demo.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>練習問題４－９：すべての h2 要素の背景色を変更する</h4>
+      <p>h2要素の背景色を変更した。</p>
+      <p>編集したファイル：<a href="practice-dom/dom-demo.html" target="_blank">dom-demo.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>練習問題４－１１：プレースホルダーとしての div 要素と span 要素</h4>
+      <p>画像ファイルと文書を指定して書き換えるプログラムを作った。</p>
+      <p>編集したファイル：<a href="practice-dom/div-span-demo1.html" target="_blank">div-span-demo1.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>練習問題４－１２：写真表</h4>
+      <p>プログラムで作られたdiv要素を確認し、HTMLファイルを書き換えてCSSを適用した。</p>
+      <p>編集したファイル：<a href="practice-dom/div-demo2.html" target="_blank">div-demo2.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>課題４－１：数当てゲームのページを改良する</h4>
+      <p>「console.log」で出力していた結果を、HTMLで表示するように書き換えた。</p>
+      <p>編集したファイル：<a href="workspace-kazuate/kazuate.html" target="_blank">workspace-kazuate/kazuate.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>課題４－２：オブジェクトをページ上に表示する（プロジェクト課題）</h4>
+      <p>「weather.js」を書き換え、検索結果をHTML上に表示した。</p>
+      <p>編集したファイル：<a href="project.html" target="_blank">project.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>課題４－３：index.html を編集しよう</h4>
+      <p>本ページの編集を行った。</p>
+    </div>
 
     <p><br></p>
     <h3>第５回Webページの動的な編集</h3>
