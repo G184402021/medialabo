@@ -252,11 +252,63 @@
 
     <p><br></p>
     <h3>第５回Webページの動的な編集</h3>
+    <p>今回はイベント処理を学んだ。イベント処理はJavaScriptに記述する。</p>
+    <p>　　[要素].addEventListener('イベント', [関数名「（）」は付けない])</p>
+    <p>のように書くことで、指定されたことが起きた時、上記の関数が呼び出される。</p>
+    <p><strong>イベント例</strong></p>
+    <ul>
+      <li>click：クリックされた時</li>
+      <li>dblclick：ダブルクリックされた時</li>
+      <li>mouseover：マウスが上に来た時</li>
+      <li>mousemove：マウスが動いたとき</li>
+      <li>mouseleave：マウスが離れた時</li>
+      <li>focus：要素をフォーカスした時</li>
+      <li>keypress：キーボードのキーを押した時</li>
+    </ul>
+    <p>ユーザに入力してもらう入力ボックスは、input要素で設定できる。
+      このとき、input要素を説明するlabel要素を前に作成し、ボタンを設置することでボタンがクリックされた時の処理を記述することができる。
+      「document.querySelector('input[name="名前"]')」と書いて、入力されたデータを持ってくるができる。</p>
+      <p>input要素に「type="checkbox"」と書くとチェックボックス、「type="radio"」と書くとラジオボタンが表示される。</p>
 
-    <p><br></p>
-    <h3>第６回Webページ作成演習</h3>
+    <div class="kadai">
+      <h4>練習問題５－２：イベントハンドラの登録を確認する </h4>
+      <p>ivent-intor.js を編集し、ランダムIDのボダン要素を探して、クリックされた時ランダムに背景色が変化するように書き換えた。</p>
+      <p>編集したファイル：<a href="practice-event/event-intro.html" target="_blank">practice-event/event-intro.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>練習問題５－３：イベントを選択する</h4>
+      <p>いろいろなイベントで色が変わる処理を追加した。</p>
+      <p>編集したファイル：<a href="practice-event/event-list.html" target="_blank">practice-event/event-list.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>課題５－１：数当てゲームの完成</h4>
+      <p>数当てゲームを完成させた。</p>
+      <p>編集したファイル：<a href="workspace-kazuate/kazuate.html" target="_blank">workspace-kazuate/kazuate.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>課題５－２：検索欄を設置する（プロジェクト課題）</h4>
+      <p>検索欄を設置した。</p>
+      <p>編集したファイル：<a href="project.html" target="_blank">project.html</a></p>
+    </div>
+
+    <div class="kadai">
+      <h4>課題５－３：</h4>
+      <p>本ページを編集した。</p>
+    </div>
 
     <p><br></p>
   </div>
+
+  <div class="haikei">
+    <h2>工夫点，苦心点，強調点，感想</h2>
+  </div>
+  <div class="haikei">
+    <p></p>
+  </div>
+
+  
   </body>
 </html>
