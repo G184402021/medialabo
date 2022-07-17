@@ -123,15 +123,72 @@ let weatherI = [
   'https://1.bp.blogspot.com/-th4FJ61uktg/VJF-_RykxPI/AAAAAAAApxg/dWB9tqNLKqw/s800/sky_line08_snow.png'
 ]
 
-let b = document.querySelector('button#search').addEventListener('click', print);
+document.querySelector('button#Cairo').addEventListener('click', printC);
+document.querySelector('button#Moscow').addEventListener('click', printM);
+document.querySelector('button#Johannesburg').addEventListener('click', printJ);
+document.querySelector('button#Beijing').addEventListener('click', printB);
+document.querySelector('button#Tokyo').addEventListener('click', printT);
+document.querySelector('button#Singapore').addEventListener('click', printSi);
+document.querySelector('button#Sydney').addEventListener('click', printSy);
+document.querySelector('button#London').addEventListener('click', printLon);
+document.querySelector('button#Paris').addEventListener('click', printP);
+document.querySelector('button#RiodeJaneiro').addEventListener('click', printR);
+document.querySelector('button#NewYork').addEventListener('click', printN);
+document.querySelector('button#LosAngeles').addEventListener('click', printLos);
 
-function print() {
-  let dataId = Math.floor(document.querySelector('select[name="city"]').value);
+function printC() {
+  let dataId = Math.floor(document.querySelector('button#Cairo').value);
+  print(dataId);
+}
+function printM() {
+  let dataId = Math.floor(document.querySelector('button#Moscow').value);
+  print(dataId);
+}
+function printJ() {
+  let dataId = Math.floor(document.querySelector('button#Johannesburg').value);
+  print(dataId);
+}
+function printB() {
+  let dataId = Math.floor(document.querySelector('button#Beijing').value);
+  print(dataId);
+}
+function printT() {
+  let dataId = Math.floor(document.querySelector('button#Tokyo').value);
+  print(dataId);
+}
+function printSi() {
+  let dataId = Math.floor(document.querySelector('button#Singapore').value);
+  print(dataId);
+}
+function printSy() {
+  let dataId = Math.floor(document.querySelector('button#Sydney').value);
+  print(dataId);
+}
+function printLon() {
+  let dataId = Math.floor(document.querySelector('button#London').value);
+  print(dataId);
+}
+function printP() {
+  let dataId = Math.floor(document.querySelector('button#Paris').value);
+  print(dataId);
+}
+function printR() {
+  let dataId = Math.floor(document.querySelector('button#RiodeJaneiro').value);
+  print(dataId);
+}
+function printN() {
+  let dataId = Math.floor(document.querySelector('button#NewYork').value);
+  print(dataId);
+}
+function printLos() {
+  let dataId = Math.floor(document.querySelector('button#LosAngeles').value);
+  print(dataId);
+}
+
+function print(dataId) {
   let count = 0;
   let urlM;
   let urlI;
-
-
 
   for(let i=0; i<itemBefore.length; i++) {
     console.log(itemBefore[i] + '：' + printData[i] + itemAfter[i]);
@@ -142,8 +199,6 @@ function print() {
     console.log(th[i]);
     th[i].textContent = printData[i] + itemAfter[i];
   }
-
-
 
   for(let o of mapUrlId) {
     if(dataId === o) {
@@ -159,5 +214,5 @@ function print() {
     }
   }
   document.querySelector('iframe').setAttribute('src', urlM);
-  document.querySelector('img').setAttribute('src', urlI);
+  document.querySelectorAll('img')[1].setAttribute('src', urlI);
 }

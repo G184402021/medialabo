@@ -11,28 +11,21 @@
             <h1>世界の天気</h1>
         </div>
 
-        <p><br></p>
-
-        <from>
-            <label for="city">都市名を入力</label>
-            <select type="" name="city" id="city">
-                <option value="360630"> カイロ （エジプト）</option>
-                <option value="524901">モスクワ （ロシア）</option>
-                <option value="993800">ヨハネスブルク （南アフリカ）</option>
-                <option value="1816670">北京 （中華人民共和国）</option>
-                <option value="1850147">東京 （日本）</option>
-                <option value="1880252"> シンガポール</option>
-                <option value="2147714">シドニー （オーストラリア）</option>
-                <option value="2643743">ロンドン （イギリス）</option>
-                <option value="2968815">パリ （フランス）</option>
-                <option value="3451189">リオデジャネイロ （ブラジル）</option>
-                <option value="5128581">ニューヨーク （アメリカ合衆国）</option>
-                <option value="5368361">ロサンゼルス （アメリカ合衆国）</option>
-            </select>
-            <button id="search">検索</button>
-        </from>
-
-        <p><br></p>
+        <div>
+            <img src="WMap.png" alt="world map" class="map">
+            <button id="Cairo" class="Cairo" value="360630">カイロ</button>
+            <button id="Moscow" class="Moscow" value="524901">モスクワ</button>
+            <button id="Johannesburg" class="Johannesburg" value="993800">ヨハネスブルク</button>
+            <button id="Beijing" class="Beijing" value="1816670">北京</button>
+            <button id="Tokyo" class="Tokyo" value="1850147">東京</button>
+            <button id="Singapore" class="Singapore" value="1880252">シンガポール</button>
+            <button id="Sydney" class="Sydney" value="2147714">シドニー</button>
+            <button id="London" class="London" value="2643743">ロンドン</button>
+            <button id="Paris" class="Paris" value="2968815">パリ</button>
+            <button id="RiodeJaneiro" class="RiodeJaneiro" value="3451189">リオデジャネイロ</button>
+            <button id="NewYork" class="NewYork" value="5128581">ニューヨーク</button>
+            <button id="LosAngeles" class="LosAngeles" value="5368361">ロサンゼルス</button>
+        </div>
 
         <table class="table">
             <colgroup span="6"></colgroup>
@@ -56,11 +49,10 @@
             </tbody>
         </table>
 
-        <p><br></p>
+        <div class="margin">
 
-        <img>
-
-
-        <iframe width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <img>
+            <iframe width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </body>
 </html>

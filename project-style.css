@@ -1,17 +1,22 @@
 
 body {
     background-color: #e7f6ff;
-    text-align: center;
 }
 
 div.title {
     width: 350px;
+    text-align: center;
     background-color: #266583;
     border-radius: 10px;
     color: #ffffff;
     padding: 0.1px;
-    margin-left: auto;
+    margin-left: 380px;
     margin-right: auto;
+}
+
+.margin {
+    margin-left: 150px;
+    margin-right: 1000px;
 }
 
 .table {
@@ -20,10 +25,75 @@ div.title {
     text-align: center;
     background-color: #ffffff;
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 230px;
 }
 
 .head {
     background-color: #f9ffe4;
+}
+
+img.map {
+    text-align: left;
+}
+
+
+.Cairo {
+    position: absolute;
+    left: 197px;
+    top: 346px;
+}
+.Moscow {
+    position: absolute;
+    left: 228px;
+    top: 238px;
+}
+.Johannesburg {
+    position: absolute;
+    left: 200px;
+    top: 546px;
+}
+.Beijing {
+    position: absolute;
+    left: 440px;
+    top: 308px;
+}
+.Tokyo {
+    position: absolute;
+    left: 509px;
+    top: 329px;
+}
+.Singapore {
+    position: absolute;
+    left: 405px;
+    top: 453px;
+}
+.Sydney {
+    position: absolute;
+    left: 544px;
+    top: 571px;
+}
+.London {
+    position: absolute;
+    left: 116px;
+    top: 250px;
+}
+.Paris {
+    position: absolute;
+    left: 122px;
+    top: 275px;
+}
+.RiodeJaneiro {
+    position: absolute;
+    left: 1007px;
+    top: 540px;
+}
+.NewYork {
+    position: absolute;
+    left: 928px;
+    top: 308px;
+}
+.LosAngeles {
+    position: absolute;
+    left: 801px;
+    top: 333px;
 }
