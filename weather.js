@@ -1,3 +1,4 @@
+/*
 let data = {
   "coord": {
     "lon": 116.3972,
@@ -44,7 +45,7 @@ let data = {
   "name": "北京市",
   "cod": 200
 };
-
+*/
 ////////// 課題3-2 ここからプログラムを書こう
 /*
 console.log('都市名：' + data.name);
@@ -70,15 +71,6 @@ let itemAfter = [
   'm/s'
 ];
 
-let printData = [
-  data.name, 
-  data.weather[0].description, 
-  data.main.temp_max, 
-  data.main.temp_min, 
-  data.main.humidity, 
-  data.wind.speed
-];
-
 let mapUrlId = [
   360630,
   524901,
@@ -92,7 +84,7 @@ let mapUrlId = [
   3451189,
   5128581,
   5368361
-]
+];
 
 let mapUrl = [
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55251.37709963363!2d31.223444918065375!3d30.059483810345593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2z44Ko44K444OX44OIIOOCq-OCpOODreecjCDjgqvjgqTjg60!5e0!3m2!1sja!2sjp!4v1657169314224!5m2!1sja!2sjp",
@@ -107,21 +99,28 @@ let mapUrl = [
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470398.2154921685!2d-43.72616880386343!3d-22.913885060996215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bde559108a05b%3A0x50dc426c672fd24e!2z44OW44Op44K444OrIOODquOCquODh-OCuOODo-ODjeOCpOODreW3niDjg6rjgqrjg7vjg4fjg7vjgrjjg6Pjg43jgqTjg60g44Oq44Kq44OH44K444Oj44ON44Kk44Ot!5e0!3m2!1sja!2sjp!4v1657169874063!5m2!1sja!2sjp",
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.3058678848!2d-74.25986068433586!3d40.69714943092583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z44Ki44Oh44Oq44Kr5ZCI6KGG5Zu9IOODi-ODpeODvOODqOODvOOCr-W3niDjg4vjg6Xjg7zjg6jjg7zjgq8!5e0!3m2!1sja!2sjp!4v1657169925348!5m2!1sja!2sjp",
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.2739983834!2d-118.69191522904836!3d34.020161318428556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2z44Ki44Oh44Oq44Kr5ZCI6KGG5Zu9IOOCq-ODquODleOCqeODq-ODi-OCouW3niDjg63jgrXjg7Pjgrzjg6vjgrk!5e0!3m2!1sja!2sjp!4v1657169956986!5m2!1sja!2sjp"
-]
+];
 
 let weatherMoji = [
   '晴',
   '曇',
   '雨',
-  '雪'
-]
+  '雪',
+  '雲',
+  '霧'
+];
 
 let weatherI = [
   'https://1.bp.blogspot.com/-AxuNsAvZ2ok/VJF-8n1wSXI/AAAAAAAApxA/eDGFHGN0Ll8/s800/sky_line01_sun.png',
   'https://3.bp.blogspot.com/-ZpdoT0bJHb8/VJF-8iGYjSI/AAAAAAAApxE/NQBlmRXos9w/s800/sky_line03_cloud.png',
   'https://2.bp.blogspot.com/-LwXCQzWfu1E/VJF--kJTClI/AAAAAAAApxU/ETc38diXKP4/s800/sky_line06_rain.png',
-  'https://1.bp.blogspot.com/-th4FJ61uktg/VJF-_RykxPI/AAAAAAAApxg/dWB9tqNLKqw/s800/sky_line08_snow.png'
-]
+  'https://1.bp.blogspot.com/-th4FJ61uktg/VJF-_RykxPI/AAAAAAAApxg/dWB9tqNLKqw/s800/sky_line08_snow.png',
+  'https://3.bp.blogspot.com/-ZpdoT0bJHb8/VJF-8iGYjSI/AAAAAAAApxE/NQBlmRXos9w/s800/sky_line03_cloud.png',
+  'https://3.bp.blogspot.com/-ZpdoT0bJHb8/VJF-8iGYjSI/AAAAAAAApxE/NQBlmRXos9w/s800/sky_line03_cloud.png'
+];
+
+let dataId;
+let cityName;
 
 document.querySelector('button#Cairo').addEventListener('click', printC);
 document.querySelector('button#Moscow').addEventListener('click', printM);
@@ -137,55 +136,85 @@ document.querySelector('button#NewYork').addEventListener('click', printN);
 document.querySelector('button#LosAngeles').addEventListener('click', printLos);
 
 function printC() {
-  let dataId = Math.floor(document.querySelector('button#Cairo').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Cairo').value);
+  cityName = 'カイロ';
+  sendRequest();
 }
 function printM() {
-  let dataId = Math.floor(document.querySelector('button#Moscow').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Moscow').value);
+  cityName = 'モスクワ';
+  sendRequest();
 }
 function printJ() {
-  let dataId = Math.floor(document.querySelector('button#Johannesburg').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Johannesburg').value);
+  cityName = 'ヨハネスブルグ';
+  sendRequest();
 }
 function printB() {
-  let dataId = Math.floor(document.querySelector('button#Beijing').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Beijing').value);
+  cityName = '北京';
+  sendRequest();
 }
 function printT() {
-  let dataId = Math.floor(document.querySelector('button#Tokyo').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Tokyo').value);
+  cityName = '東京';
+  sendRequest();
 }
 function printSi() {
-  let dataId = Math.floor(document.querySelector('button#Singapore').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Singapore').value);
+  cityName = 'シンガポール';
+  sendRequest();
 }
 function printSy() {
-  let dataId = Math.floor(document.querySelector('button#Sydney').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Sydney').value);
+  cityName = 'シドニー';
+  sendRequest();
 }
 function printLon() {
-  let dataId = Math.floor(document.querySelector('button#London').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#London').value);
+  cityName = 'ロンドン';
+  sendRequest();
 }
 function printP() {
-  let dataId = Math.floor(document.querySelector('button#Paris').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#Paris').value);
+  cityName = 'パリ';
+  sendRequest();
 }
 function printR() {
-  let dataId = Math.floor(document.querySelector('button#RiodeJaneiro').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#RiodeJaneiro').value);
+  cityName = 'リオデジャネイロ';
+  sendRequest();
 }
 function printN() {
-  let dataId = Math.floor(document.querySelector('button#NewYork').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#NewYork').value);
+  cityName = ' ニューヨーク';
+  sendRequest();
 }
 function printLos() {
-  let dataId = Math.floor(document.querySelector('button#LosAngeles').value);
-  print(dataId);
+  dataId = Math.floor(document.querySelector('button#LosAngeles').value);
+  cityName = 'ロサンゼルス';
+  sendRequest();
 }
 
-function print(dataId) {
+function print(resp) {
+
+  // サーバから送られてきたデータを出力
+	let data = resp.data;
+
+	// data が文字列型なら，オブジェクトに変換する
+	if (typeof data === 'string') {
+		data = JSON.parse(data);
+	}
+
+  let printData = [
+    cityName, 
+    data.weather[0].description, 
+    data.main.temp_max, 
+    data.main.temp_min, 
+    data.main.humidity, 
+    data.wind.speed
+  ];
+  
   let count = 0;
   let urlM;
   let urlI;
@@ -215,4 +244,26 @@ function print(dataId) {
   }
   document.querySelector('iframe').setAttribute('src', urlM);
   document.querySelectorAll('img')[1].setAttribute('src', urlI);
+}
+
+// 通信を開始する処理
+function sendRequest() {
+	// URL を設定
+	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + dataId + '.json';
+
+	// 通信開始
+	axios.get(url)
+		.then(print)
+		.catch(showError)
+		.then(finish);
+}
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+	console.log(err);
+}	
+
+// 通信の最後にいつも実行する処理
+function finish() {
+	console.log('Ajax 通信が終わりました');
 }
