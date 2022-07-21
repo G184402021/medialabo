@@ -16,7 +16,7 @@
             <img src="WMap.png" alt="world map" class="map">
             <button id="Cairo" class="Cairo" value="360630">カイロ</button>
             <button id="Moscow" class="Moscow" value="524901">モスクワ</button>
-            <button id="Johannesburg" class="Johannesburg" value="993800">ヨハネスブルク</button>
+            <button id="Johannesburg" class="Johannesburg" value="993800">ヨハネスブルグ</button>
             <button id="Beijing" class="Beijing" value="1816670">北京</button>
             <button id="Tokyo" class="Tokyo" value="1850147">東京</button>
             <button id="Singapore" class="Singapore" value="1880252">シンガポール</button>
@@ -28,32 +28,38 @@
             <button id="LosAngeles" class="LosAngeles" value="5368361">ロサンゼルス</button>
         </div>
 
-        <table class="table">
-            <colgroup span="6"></colgroup>
-            <tbody>
-                <tr id="head" class="head">
-                    <th>都市名</th>
-                    <th>天気</th>
-                    <th>最高気温</th>
-                    <th>最低気温</th>
-                    <th>湿度</th>
-                    <th>風速</th>
-                </tr>
-                <tr id="hyou">
-                    <th id="el"></th>
-                    <th id="el"></th>
-                    <th id="el"></th>
-                    <th id="el"></th>
-                    <th id="el"></th>
-                    <th id="el"></th>
-                </tr>
-            </tbody>
-        </table>
+        <div class="haikei">
+            <img id="flag" class="flag">
 
-        <div class="margin">
+            <table class="table">
+            
+                <tbody>
+                    <tr id="head" class="head">
+                        <th>都市名</th>
+                        <th>天気</th>
+                        <th>最高気温</th>
+                        <th>最低気温</th>
+                        <th>湿度</th>
+                        <th>風速</th>
+                    </tr>
+                    <tr id="hyou">
+                        <th id="el0">〇〇</th>
+                        <th id="el1">〇〇</th>
+                        <th id="el2">〇°C</th>
+                        <th id="el3">〇°C</th>
+                        <th id="el4">〇%</th>
+                        <th id="el5">〇m/s</th>
+                    </tr>
+                </tbody>
+            </table>
 
-            <img>
-            <iframe width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="margin">
+
+                <img id="weahter">
+                <iframe width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
+
+        <p><br></p>
     </body>
 </html>

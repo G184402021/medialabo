@@ -119,6 +119,21 @@ let weatherI = [
   'https://3.bp.blogspot.com/-ZpdoT0bJHb8/VJF-8iGYjSI/AAAAAAAApxE/NQBlmRXos9w/s800/sky_line03_cloud.png'
 ];
 
+let flagUrl = [
+  'https://4.bp.blogspot.com/-t3VS4edwqm0/U2s6bGt9G_I/AAAAAAAAgF4/LHhZkPETLgc/s800/Egypt.png',
+  'https://1.bp.blogspot.com/-4sFgu-DEXCA/U2tIfMudQgI/AAAAAAAAgcU/5djnQvGUjmk/s800/Russia.png',
+  'https://2.bp.blogspot.com/-Ex55uN1wPgA/U2s6mSqc7oI/AAAAAAAAgJ8/Mj0lhQrjdhA/s800/South-Africa.png',
+  'https://2.bp.blogspot.com/-DTdXmcwA83Y/U2tHcYE6LdI/AAAAAAAAgMw/d5FGVyWWM_U/s800/China.png',
+  'https://2.bp.blogspot.com/-HcYwPkNFxJY/U2tHgvzDD6I/AAAAAAAAgOc/AVd1W_9E1xo/s800/Japan.png',
+  'https://2.bp.blogspot.com/-MbBCMYloDFA/U2tHoW9HZ5I/AAAAAAAAgQw/VJiFmGkTuko/s800/Singapore.png',
+  'https://1.bp.blogspot.com/-XdwTIbtRVcM/U2tIXlOKG4I/AAAAAAAAgZw/qle7yN_5Scs/s800/Australia.png',
+  'https://4.bp.blogspot.com/-cmir50xmDKc/U2tIoZdlayI/AAAAAAAAgfY/2HJDsGA9fsE/s800/United-Kingdom.png',
+  'https://4.bp.blogspot.com/-G-oVDy6V_9U/U2tIHjbzTwI/AAAAAAAAgUk/NKx_-CLe2Rw/s800/France.png',
+  'https://1.bp.blogspot.com/-Tej1BcRRzXA/U2tJ03Dw4pI/AAAAAAAAggs/JA_urjo5_nc/s800/Brazil.png',
+  'https://4.bp.blogspot.com/-LzZwHtzb0Ec/U2tInZJR-yI/AAAAAAAAgfU/h3d6BYuqUEs/s800/United-States-of-America.png',
+  'https://4.bp.blogspot.com/-LzZwHtzb0Ec/U2tInZJR-yI/AAAAAAAAgfU/h3d6BYuqUEs/s800/United-States-of-America.png'
+]
+
 let dataId;
 let cityName;
 
@@ -187,7 +202,7 @@ function printR() {
 }
 function printN() {
   dataId = Math.floor(document.querySelector('button#NewYork').value);
-  cityName = ' ニューヨーク';
+  cityName = 'ニューヨーク';
   sendRequest();
 }
 function printLos() {
@@ -206,6 +221,8 @@ function print(resp) {
 		data = JSON.parse(data);
 	}
 
+  console.log(data);
+
   let printData = [
     cityName, 
     data.weather[0].description, 
@@ -218,20 +235,22 @@ function print(resp) {
   let count = 0;
   let urlM;
   let urlI;
+  let urlF;
 
   for(let i=0; i<itemBefore.length; i++) {
     console.log(itemBefore[i] + '：' + printData[i] + itemAfter[i]);
   }
   
-  let th = document.querySelectorAll('th#el');
   for(let i=0; i<itemBefore.length; i++) {
-    console.log(th[i]);
-    th[i].textContent = printData[i] + itemAfter[i];
+    let th = document.querySelector('th#el' + i);
+    console.log(th);
+    th.textContent = printData[i] + itemAfter[i];
   }
 
   for(let o of mapUrlId) {
     if(dataId === o) {
       urlM = mapUrl[count];
+      urlF = flagUrl[count];
       break;
     }
     count = count + 1;
@@ -243,7 +262,8 @@ function print(resp) {
     }
   }
   document.querySelector('iframe').setAttribute('src', urlM);
-  document.querySelectorAll('img')[1].setAttribute('src', urlI);
+  document.querySelector('img#weahter').setAttribute('src', urlI);
+  document.querySelector('img#flag').setAttribute('src', urlF);
 }
 
 // 通信を開始する処理
